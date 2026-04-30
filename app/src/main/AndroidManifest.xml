@@ -178,6 +178,17 @@
             </intent-filter>
         </provider>
 
+      <receiver
+        android:name=".automation.AutomationReceiver"
+        android:enabled="true"
+        android:exported="true">
+        <intent-filter>
+          <action android:name="io.nekohasekai.sfa.intent.START" />
+          <action android:name="io.nekohasekai.sfa.intent.STOP" />
+          <action android:name="io.nekohasekai.sfa.intent.TOGGLE" />
+        </intent-filter>
+      </receiver>
+
     </application>
 
 </manifest>
