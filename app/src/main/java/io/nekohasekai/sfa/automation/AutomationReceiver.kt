@@ -16,7 +16,7 @@ class AutomationReceiver : BroadcastReceiver() {
         val action = intent.action ?: return
 
         val token = intent.getStringExtra(EXTRA_TOKEN)
-        if (token != "my-secret") {
+        if (token != "andrka-sing-box") {
             Log.w(TAG, "Rejected automation intent: invalid token")
             return
         }
@@ -47,7 +47,7 @@ class AutomationReceiver : BroadcastReceiver() {
 
             ACTION_TOGGLE -> {
                 Log.i(TAG, "TOGGLE requested")
-                // Позже добавим нормальный toggle, когда найдём флаг текущего состояния.
+                // not need
             }
 
             else -> {
@@ -59,9 +59,9 @@ class AutomationReceiver : BroadcastReceiver() {
     companion object {
         private const val TAG = "SFA-Automation"
 
-        const val ACTION_START = "io.nekohasekai.sfa.intent.START"
-        const val ACTION_STOP = "io.nekohasekai.sfa.intent.STOP"
-        const val ACTION_TOGGLE = "io.nekohasekai.sfa.intent.TOGGLE"
+        const val ACTION_START = "com.andrka.sfa.intent.START"
+        const val ACTION_STOP = "com.andrka.sfa.intent.STOP"
+        const val ACTION_TOGGLE = "com.andrka.sfa.intent.TOGGLE"
 
         const val EXTRA_TOKEN = "token"
     }

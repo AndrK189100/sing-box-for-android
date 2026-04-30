@@ -183,9 +183,9 @@
         android:enabled="true"
         android:exported="true">
         <intent-filter>
-          <action android:name="io.nekohasekai.sfa.intent.START" />
-          <action android:name="io.nekohasekai.sfa.intent.STOP" />
-          <action android:name="io.nekohasekai.sfa.intent.TOGGLE" />
+          <action android:name="com.andrka.sfa.intent.START" />
+          <action android:name="com.andrka.sfa.intent.STOP" />
+          <action android:name="com.andrka.sfa.intent.TOGGLE" />
         </intent-filter>
       </receiver>
 
